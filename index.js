@@ -1,5 +1,5 @@
 const Canvas = require("canvas");
-const Discord  = require("discord.js")
+const { MessageAttachment}   = require("discord.js")
 class sakura_canvas {
      constructor() {
  }
@@ -32,7 +32,7 @@ ctx.closePath();
 ctx.clip();
 const avatar = await Canvas.loadImage(args.avatar);
 ctx.drawImage(avatar,25, 25, 200, 200)
-return  message.channel.send(new Discord.MessageAttachment(canvas.toBuffer(), 'profile.png'))
+return  message.channel.send(new MessageAttachment(canvas.toBuffer(), 'profile.png'))
  }
 }
 module.exports = sakura_canvas;
