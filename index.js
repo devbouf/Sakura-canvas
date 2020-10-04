@@ -32,7 +32,7 @@ ctx.closePath();
 ctx.clip();
 const avatar = await Canvas.loadImage(args.avatar);
 ctx.drawImage(avatar,25, 25, 200, 200)
-return  message.channel.send(new MessageAttachment(canvas.toBuffer(), 'profile.png'))
+return  message.channel.send(new MessageAttachment(canvas.toBuffer(), 'rank.png'))
  }
 }
 module.exports = sakura_canvas;
